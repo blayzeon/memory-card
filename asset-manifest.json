@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.12790028.css",
+    "main.js": "/memory-card/static/js/main.4cda91fc.js",
+    "index.html": "/memory-card/index.html",
+    "main.12790028.css.map": "/memory-card/static/css/main.12790028.css.map",
+    "main.4cda91fc.js.map": "/memory-card/static/js/main.4cda91fc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12790028.css",
+    "static/js/main.4cda91fc.js"
+  ]
+}
