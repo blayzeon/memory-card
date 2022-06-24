@@ -85,7 +85,7 @@ p {
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 1rem;
-  background-color: hsl(0, 0%, 10%, 90%);
+  background-color: rgba(30, 27, 42, 0.9);
   border: 0.1rem dashed hsl(0, 0%, 100%, 80%);
 }
 

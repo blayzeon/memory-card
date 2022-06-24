@@ -12,10 +12,20 @@ function App() {
   };
 
   const resetScore = () => {
-    if (score > bestScore) {
-      setBest(score);
-    }
+    const finalScore = score;
+    const difference = (bestScore - finalScore) * -1;
     setScore(0);
+
+    let message = `You clicked ${score} unique cards!`;
+
+    if (score > bestScore) {
+      if (bestScore > 0) {
+        message = `You beat your previous score of ${bestScore} by ${difference}!`;
+      }
+      setBest(finalScore);
+    }
+
+    alert(message);
   };
 
   return (
