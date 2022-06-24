@@ -74,7 +74,7 @@ p {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .space-between > * {
@@ -87,6 +87,7 @@ p {
   border-radius: 1rem;
   background-color: rgba(30, 27, 42, 0.9);
   border: 0.1rem dashed hsl(0, 0%, 100%, 80%);
+  user-select: none;
 }
 
 .text-start {
@@ -95,4 +96,38 @@ p {
 
 .text-end {
   text-align: end;
+}
+
+.popup-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(81, 78, 100, 0.6);
+}
+
+.popup-content {
+  opacity: 1 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10rem;
+  width: 20rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid black;
+  box-shadow: 0 0 5px rgb(68, 68, 68);
+}
+
+.popup-content > button:hover {
+  cursor: pointer;
 }

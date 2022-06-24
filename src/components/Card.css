@@ -3,7 +3,7 @@
 }
 
 .card-container {
-  font-size: calc(-0.6rem + 4vw);
+  font-size: calc(-0.4rem + 3.7vw);
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -13,6 +13,7 @@
   font-weight: bold;
   outline: 0.1rem solid gray;
   box-shadow: 0 0 5px black;
+  user-select: none;
 }
 
 .card-container:hover {
@@ -65,11 +66,11 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
   .card-pair {
     height: 100%;
     width: 100%;
-    font-size: xx-large;
+    font-size: x-large;
     justify-content: center;
     align-items: center;
     text-align: center;
