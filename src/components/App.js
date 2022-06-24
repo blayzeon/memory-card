@@ -21,13 +21,18 @@ function App() {
   return (
     <div className="container">
       <div className="flex space-between margin-bottom">
-        <div>
+        <div className="text-start">
           <h1>Memory</h1>
           <p>click every card exactly once to win</p>
         </div>
-        <div>
-          <p>current: {score}</p>
-          <p>best: {bestScore}</p>
+        <div className="text-end">
+          <p>
+            <strong>current:</strong> {score}
+          </p>
+          <p>
+            <strong>best: </strong>
+            {bestScore}
+          </p>
         </div>
       </div>
       <Deck score={incrScore} reset={resetScore} />
