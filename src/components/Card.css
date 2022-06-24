@@ -1,0 +1,72 @@
+.card-container {
+  font-size: (-0.875rem + 8.333vw);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 0 0.5rem;
+  aspect-ratio: 1 / 1.5;
+  font-weight: bold;
+  outline: 0.2rem solid rgb(65, 65, 65);
+}
+
+.card-container:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.75rem rgb(219, 239, 255));
+  outline: 0.2rem solid black;
+}
+
+.card-container > div {
+  padding: 0 0.5rem;
+}
+
+.card-spades {
+  color: black;
+}
+
+.card-hearts {
+  color: red;
+}
+
+.card-clubs {
+  color: blue;
+}
+
+.card-diamonds {
+  color: purple;
+}
+
+.card-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-left {
+  justify-self: start;
+}
+
+.card-right {
+  justify-self: end;
+}
+
+.card-center {
+  font-family: "Brush Script MT", cursive;
+  justify-self: center;
+}
+
+@media only screen and (min-width: 1200px) {
+  .card-container {
+    font-size: xx-large;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-container {
+    font-size: xx-large;
+  }
+  .large-screen {
+    visibility: hidden;
+  }
+}

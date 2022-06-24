@@ -7,7 +7,14 @@ body,
 
 body {
   background-color: gray;
-  padding: 1rem;
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1,
@@ -17,10 +24,9 @@ p {
 }
 
 .grid {
-  width: 100%;
+  width: clamp(200px, 80% + 20px, 800px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
   gap: 0.5rem;
 }
 
@@ -60,6 +66,7 @@ p {
 }
 
 .space-between {
+  width: 100%;
   justify-content: space-between;
 }
 

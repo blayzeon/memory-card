@@ -17,15 +17,49 @@ export default function Deck(props) {
     return newArray;
   }
 
+  function cutDeck(deck, amount) {
+    const newDeck = deck.splice(0, amount);
+    return newDeck;
+  }
+
+  /*
+    Create the DECK
+    ♤ ♡ ♧ ♢
+  */
+
   useEffect(() => {
-    const newCards = props.cards.map((card) => {
-      return {
-        src: card.src,
-        alt: card.alt,
-        key: uuidv4(),
-        clicked: false,
-      };
-    });
+    const newCards = [];
+    const suits = [
+      ["♤", "spades"],
+      ["♡", "hearts"],
+      ["♧", "clubs"],
+      ["♢", "diamonds"],
+    ];
+
+    let count = 1;
+    while (newCards.length < 52) {
+      let value = count;
+      if (value === 1) {
+        value = "A";
+      } else if (value === 11) {
+        value = "J";
+      } else if (value === 12) {
+        value = "Q";
+      } else if (value === 13) {
+        value = "K";
+      }
+
+      for (let i = 0; i < suits.length; i += 1) {
+        newCards.push({
+          suit: suits[i],
+          value,
+          key: uuidv4(),
+          clicked: false,
+        });
+      }
+
+      count += 1;
+    }
 
     setCards(newCards);
   }, []);
@@ -54,8 +88,8 @@ export default function Deck(props) {
       {cards.map((card) => {
         return (
           <Card
-            src={card.src}
-            alt={card.alt}
+            suit={card.suit}
+            value={card.value}
             key={card.key}
             id={card.key}
             event={handleClick}
