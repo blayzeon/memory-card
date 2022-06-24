@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="container">
-      <div className="flex space-between margin-bottom">
+      <div className="flex space-between header">
         <div className="text-start">
           <h1>Memory</h1>
           <p>click every card exactly once to win</p>

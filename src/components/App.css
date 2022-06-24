@@ -2,16 +2,40 @@ html {
   min-width: 375px;
 }
 
-html,
-body,
-#root,
-.container {
-  height: 90%;
-}
-
 body {
-  background-color: gray;
   padding: 2rem;
+  background-color: rgba(156, 196, 197, 0.8);
+  background-image: repeating-linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 3px,
+      transparent 3px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      60deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 1px,
+      transparent 3px,
+      transparent 60px
+    ),
+    linear-gradient(
+      60deg,
+      rgba(139, 139, 139, 0.6) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(139, 139, 139, 0.6) 75%,
+      rgba(139, 139, 139, 0.6)
+    ),
+    linear-gradient(
+      120deg,
+      rgba(139, 139, 139, 0.6) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(139, 139, 139, 0.6) 75%,
+      rgba(139, 139, 139, 0.6)
+    );
+  background-size: 70px 120px;
 }
 
 .container {
@@ -19,6 +43,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 2rem;
 }
 
 h1,
@@ -28,10 +53,11 @@ p {
 }
 
 .grid {
-  width: clamp(200px, 80% + 20px, 800px);
+  width: clamp(200px, 70% + 20px, 800px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 .flex {
@@ -55,8 +81,12 @@ p {
   min-width: 8rem;
 }
 
-.margin-bottom {
-  margin-bottom: 2rem;
+.header {
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  background-color: hsl(0, 0%, 10%, 90%);
+  border: 0.1rem dashed hsl(0, 0%, 100%, 80%);
 }
 
 .text-start {

@@ -3,7 +3,7 @@
 }
 
 .card-container {
-  font-size: calc(-0.5rem + 4vw);
+  font-size: calc(-0.6rem + 4vw);
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -11,13 +11,14 @@
   border-radius: 0.3rem;
   aspect-ratio: 1 / 1.5;
   font-weight: bold;
-  outline: 0.2rem solid rgb(65, 65, 65);
+  outline: 0.1rem solid gray;
+  box-shadow: 0 0 5px black;
 }
 
 .card-container:hover {
   cursor: pointer;
-  filter: drop-shadow(0 0 0.75rem rgb(219, 239, 255));
-  outline: 0.2rem solid black;
+  filter: drop-shadow(0 0 0.1rem orange);
+  outline: 0.1rem solid orange;
 }
 
 .card-spades {
@@ -39,16 +40,18 @@
 .card-pair {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .card-left {
   justify-self: start;
-  margin-left: clamp(0.5rem, (0.5rem + 2vw), 1rem);
+  margin-left: 0.5rem;
 }
 
 .card-right {
   justify-self: end;
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .card-center {
@@ -62,7 +65,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .card-pair {
     height: 100%;
     width: 100%;
