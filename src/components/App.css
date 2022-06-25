@@ -1,5 +1,7 @@
 html {
   min-width: 375px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body {
@@ -40,10 +42,16 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 2rem;
+}
+
+.screen-size {
+  transition: ease all 0.3s;
+  width: 23rem;
 }
 
 h1,
@@ -53,11 +61,10 @@ p {
 }
 
 .grid {
-  width: clamp(200px, 70% + 20px, 800px);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .flex {
@@ -126,8 +133,23 @@ p {
   border-radius: 1rem;
   border: 1px solid black;
   box-shadow: 0 0 5px rgb(68, 68, 68);
+  margin: 20rem;
+  user-select: none;
 }
 
-.popup-content > button:hover {
+.popup-content > button {
+  padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+@media only screen and (min-width: 730px) {
+  .screen-size {
+    width: 32rem;
+  }
+}
+
+@media only screen and (min-width: 850px) and (min-height: 1000px) {
+  .screen-size {
+    width: 45rem;
+  }
 }

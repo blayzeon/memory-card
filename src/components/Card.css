@@ -3,7 +3,8 @@
 }
 
 .card-container {
-  font-size: calc(-0.4rem + 3.7vw);
+  transition: ease all 0.2s;
+  font-size: 1.4rem;
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -14,28 +15,56 @@
   outline: 0.1rem solid gray;
   box-shadow: 0 0 5px black;
   user-select: none;
+  margin: 0.2rem;
 }
 
 .card-container:hover {
   cursor: pointer;
-  filter: drop-shadow(0 0 0.1rem orange);
-  outline: 0.1rem solid orange;
 }
 
-.card-spades {
+.card-container p,
+.card-container > h1 {
   color: black;
 }
 
+.card-spades {
+  color: #0072b2;
+}
+
 .card-hearts {
-  color: red;
+  color: #cc79a7;
 }
 
 .card-clubs {
-  color: blue;
+  color: #009e73;
 }
 
 .card-diamonds {
-  color: purple;
+  color: #e69f00;
+}
+
+.card-spades:hover {
+  color: #0072b2;
+  filter: drop-shadow(0 0 0.1rem #0072b2);
+  outline: 0.1rem solid #0072b2;
+}
+
+.card-hearts:hover {
+  color: #cc79a7;
+  filter: drop-shadow(0 0 0.1rem #cc79a7);
+  outline: 0.1rem solid #cc79a7;
+}
+
+.card-clubs:hover {
+  color: #009e73;
+  filter: drop-shadow(0 0 0.1rem #009e73);
+  outline: 0.1rem solid #009e73;
+}
+
+.card-diamonds:hover {
+  color: #e69f00;
+  filter: drop-shadow(0 0 0.1rem #e69f00);
+  outline: 0.1rem solid #e69f00;
 }
 
 .card-pair {
@@ -56,21 +85,19 @@
 }
 
 .card-center {
-  font-family: "Brush Script MT", cursive;
+  font-family: "Luminari";
   justify-self: center;
 }
 
-@media only screen and (min-width: 1000px) {
-  .card-container {
-    font-size: xx-large;
-  }
+.upsidedown {
+  transform: scale(-1, -1);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 730px) {
   .card-pair {
     height: 100%;
     width: 100%;
-    font-size: x-large;
+    font-size: 2.5rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -83,5 +110,11 @@
 
   .large-screen {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 850px) and (min-height: 1000px) {
+  .card-container {
+    font-size: 2rem;
   }
 }
